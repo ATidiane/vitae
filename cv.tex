@@ -133,8 +133,70 @@
 This CV is automatically generated and deployed using the \href{https://github.com/jitinnair1/autoCV}{autoCV} template along with GitHub Actions such that a new version of the CV is compiled, published and ready for use when the cv.tex file is updated. For details, \href{https://github.com/jitinnair1/autoCV}{click here}.
 
 %Experience
-\section{Work Experience}
+\section{Expériences}
 
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{R\&D Deep Learning Engineer Intern} & \hfill Mars 2020 - Août 2020 \\[3.75pt] 
+\textit{\textsc{Groupe PSA - Velizy Villacoublay}}
+\multicolumn{2}{@{}X@{}}{
+\begin{minipage}[t]{\linewidth}
+\textbf{Classification d’intentions piétons par intelligence artificielle pour le véhicule autonome}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+        \item[--] État de l’art, prise en main des données JAAD (Joint Attention for Autonomous Driving) et PIE (Pedestrian Intent Estimation);
+        \item[--] Récupérer les keypoints des différents piétons avec un algorithme de pose estimation notamment AlphaPose;
+        \item[--] Classification de piétons avec des modèles de réseaux de neurones
+récurrents tels que Long Short Term Memory (LSTMs);
+        \item[--] Exploration des transformers dans la continuité du projet;
+        \item[--] Présentation de papiers de recherches (RNNs, GRU) durant les workshops;
+        \item[--] Dépôt de brevet sur les travaux à l’institut national de propriété industrielle (INPI) sous le numéro $FR3119480A1$ : A method and apparatus for controlling a vehicle based on a prediction of a pedestrian’s intention to cross a roadway on which said vehicle is traveling.
+    \end{itemize}
+\end{minipage}
+}
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Data Science Intern} & \hfill Juillet 2019 - Août 2019 \\[3.75pt] 
+\textit{\textsc{Data Factory - Bruxelles}}
+\multicolumn{2}{@{}X@{}}{
+\begin{minipage}[t]{\linewidth}
+\textbf{Prévision des retards des trains dans les transports publics bruxellois}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+        \item[--] Créer un script pour collecter des données quotidiennement avec AWS EC2 instance;
+        \item[--] Analyser la situation actuelle et les tendances existantes telles que les trains ou les gares qui cumulent le plus de retards dans les différentes régions;
+        \item[--] Créer des visualisations claires et interactives (plot.ly et matplotlib bibliothèques) sur les cartes pour expliquer les résultats de mon analyse des données;
+        \item[--] Développer des modèles d’ensembles et des baselines tels qu’une simple régression linéaire pour prédire les retards avec les données prétraitées.
+    \end{itemize} \\
+
+\textbf{Prévision des salaires des joueurs de football de la Jupiler Pro League}  & \hfill \href{https://atidiane.github.io/fifa-storyline/} \\
+[3.75pt]
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+        \item[--] Faire du scraping (beautifulsoup4) pour recueillir des données sur les joueurs de la Jupiler Pro League;
+        \item[--] Fusionner les données collectées avec d’autres sources pour obtenir plus d’informations sur les joueurs;
+        \item[--] Nettoyer, prétraiter et prédire les salaires des joueurs;
+        \item[--] Faire une storyline sur les salaires dans le football avec des visualisations interactives puis y intégrer une simple régréssion linéaire pour prédire les salaires en fonction des caractéristiques du joueur sélectionné ainsi qu’un KNN (K-Nearest Neighbors) pour trouver les cinq joueurs Jupiler Pro League les plus proches de ces mêmes caractéristiques.
+    \end{itemize}
+\end{minipage}
+}
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Assistant de recherche en Machine Learning} & \hfill Nov 2018 - Fev 2019 \\[3.75pt] 
+\textit{\textsc{Laboratoire Informatique de Paris 6 (LIP6)/CNRS - Paris}}
+\multicolumn{2}{@{}X@{}}{
+\begin{minipage}[t]{\linewidth}
+\textbf{Prédiction de l’affluence dans les stations de RER de l’île de France}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+        \item[--] Prise en main de la base de données MySQL des logs de validation des titres de transports;
+        \item[--] Recherche de données publiques à caractère socio-économiques sur la population de l’Île-de-France;
+        \item[--] Création, pré-traitement des jeux de données et application de la Backward Elimination pour la sélection de features;
+        \item[--] Test de différents algorithmes de régression avancée tels que eXtreme Gradient Boosting (XGBoost), Random Forest;
+        \item[--] Amélioration des résultats par une méthode d’Ensemble Learning, Stacking models.
+    \end{itemize}
+\end{minipage}
+}
+\end{tabularx}
+
+\begin{comment}
 \begin{tabularx}{\linewidth}{ @{}l r@{} }
 \textbf{Designation} & \hfill Jan 2021 - present \\[3.75pt]
 \multicolumn{2}{@{}X@{}}{long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width}  \\
@@ -151,7 +213,7 @@ This CV is automatically generated and deployed using the \href{https://github.c
     \end{minipage}
 }
 \end{tabularx}
-
+\end{comment}
 %Projects
 \section{Projets}
 
@@ -182,7 +244,7 @@ This CV is automatically generated and deployed using the \href{https://github.c
 
 2015 - 2017 & Licence Mono-Informatique à l'\textbf{Université de Pierre et Marie Curie (UPMC)} \hfill (Mention Assez Bien) \\ 
 
-2014-2015 & Licence 1 Mathématiques-Informatique à l'Université Claude Bernard de Lyon1 (UCBL)\\
+2014 - 2015 & Licence 1 Mathématiques-Informatique à l'Université Claude Bernard de Lyon1 (UCBL)\\
 
 2014 & Baccalauréat Scientifique au Lycée Sainte Marie en Guinée \\
 \end{tabularx}
