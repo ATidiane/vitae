@@ -94,9 +94,6 @@
 %for social icons
 \usepackage{fontawesome5}
 
-%Comment
-\usepackage{comment}
-\renewenvironment{comment}{}{}
 %debug page outer frames
 %\usepackage{showframe}
 
@@ -139,13 +136,20 @@ This CV is automatically generated and deployed using the \href{https://github.c
 \section{Expériences}
 
 \begin{tabularx}{\linewidth}{ @{}l r@{} }
-\textbf{R\&D Deep Learning Engineer Intern} & \hfill Mars 2020 - Août 2020 \\[3.75pt]
-\textit{\textsc{Groupe PSA - Velizy Villacoublay}}
-\multicolumn{2}{@{}X@{}}{
-lognoglongongongongongognogngonognognog
-}
+\textbf{Designation} & \hfill Jan 2021 - present \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width}  \\
 \end{tabularx}
 
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Designation} & \hfill Mar 2019 - Jan 2021 \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+        \item[--] long long line of blah blah that will wrap when the table fills the column width
+        \item[--] again, long long line of blah blah that will wrap when the table fills the column width but this time even more long long line of blah blah. again, long long line of blah blah that will wrap when the table fills the column width but this time even more long long line of blah blah
+    \end{itemize}
+    \end{minipage}
+}
 
 %Projects
 \section{Projets}
