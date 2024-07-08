@@ -9,7 +9,7 @@ jobs:
       # Edit here with the names of your latex file and directory (can use ".")
       DIR: .
       FILE: cv
-      FILERD: cvrd
+      FILE-RD: cv-rd
     steps:
       - name: Set up Git repository
         uses: actions/checkout@v3
@@ -18,24 +18,19 @@ jobs:
         with:
           root_file: ${{ env.FILE }}
           working_directory: ${{ env.DIR }}
-      - name: move
-        run: mkdir -p github_artifacts && mv ${{ env.DIR }}/${{ env.FILE }}.pdf ./github_artifacts/
-      - name: Upload pdf as artifact
-        uses: actions/upload-artifact@v3
-        with:
-          name: ${{ env.FILE }}.pdf
-          path: ./github_artifacts
-      - name: cvrd
+      - name: cv-rd
         uses: dante-ev/latex-action@latest
         with:
-          root_file: ${{ env.FILERD }}
+          root_file: ${{ env.FILE-RD }}
           working_directory: ${{ env.DIR }}
-      - name: move
-        run: mkdir -p github_artifacts && mv ${{ env.DIR }}/${{ env.FILERD }}.pdf ./github_artifacts/
-      - name: Upload pdf as artifact
+      - name: move cv
+        run: mkdir -p github_artifacts && mv ${{ env.DIR }}/${{ env.FILE }}.pdf ./github_artifacts/
+      - name: move rd cv
+        run: mkdir -p github_artifacts && mv ${{ env.DIR }}/${{ env.FILE-RD }}.pdf ./github_artifacts/
+      - name: Upload pdfs as artifact
         uses: actions/upload-artifact@v3
         with:
-          name: ${{ env.FILERD }}.pdf
+          name: pdfs
           path: ./github_artifacts
   deploy:
     needs: [build]
@@ -56,15 +51,3 @@ jobs:
           publish_branch: build
           force_orphan: true
           enable_jekyll: true
-  copy-index-to-build:
-    needs: [deploy]
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-      - name: Copy To Branches Action
-        uses: planetoftheweb/copy-to-branches@v1.3
-        env:
-          key: main
-          files: index.html CNAME
