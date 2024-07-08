@@ -71,6 +71,9 @@
 \newlength{\fullcollw}
 \setlength{\fullcollw}{0.47\textwidth}
 
+% Prevent tabularx from directly starting on the next page
+\usepackage{needspace}
+
 %custom \section
 \usepackage{titlesec}				
 \usepackage{multicol}
@@ -239,6 +242,7 @@ Face à la complexité croissante des régulations ESG et à la nécessité pour
 }
 \end{tabularx}
 
+\needspace{5\baselineskip}
 \begin{tabularx}{\linewidth}{ @{}l r@{} }
 \textbf{Machine Learning and Software Engineer} & \hfill Mars 2021 - Nov 2021 \\
 \textit{Institut National de Recherche en Informatique et en Automatique (INRIA)} & \hfill Paris \\[3.75pt]
@@ -282,6 +286,7 @@ récurrents tels que Long Short Term Memory (LSTMs);
 }
 \end{tabularx}
 
+\needspace{5\baselineskip}
 \begin{tabularx}{\linewidth}{ @{}l r@{} }
 \textbf{Assistant de recherche en Machine Learning} & \hfill Nov 2018 - Fev 2019 \\
 \textit{Laboratoire Informatique de Paris 6 (LIP6/CNRS)} & \hfill Paris \\[3.75pt]
