@@ -193,78 +193,6 @@ Pour remplacer les nombreux FAQs qu'ils avaient à disposition, le client s'est 
 }
 \end{tabularx}
 
-\begin{tabularx}{\linewidth}{ @{}l r@{} }
-\textbf{Machine Learning Engineer} & \hfill Dec 2022 - Fev 2024 \\
-\textit{Pivot \& Co} & \hfill Paris \\[3.75pt]
-\textbf{R\&D Proof-of-concepts} & \hfill Internal - \href{https://huggingface.co/Tidzo/falcon-7b-esg-instruct}{voir HF}\\
-\multicolumn{2}{@{}X@{}}{
-\begin{minipage}[t]{\linewidth}
-Face à la complexité croissante des régulations ESG et à la nécessité pour les entreprises d'y répondre de manière efficace, nous avons identifié le besoin d'un outil interactif pour simplifier l'accès à ces informations. C'est dans cet esprit que le concept d'un chatbot ESG a été développé. Ce chatbot vise à offrir une interface conviviale et intuitive pour les utilisateurs, leur permettant de comprendre et d'interroger facilement les régulations ESG. Il s'agit d'une réponse directe à l'augmentation des exigences en matière de conformité et de transparence, offrant ainsi un moyen rapide et accessible de naviguer dans les complexités des normes ESG. \\
-    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
-        \item[--] Génération de données basées sur les régulations ESG en s'inspirant de ce qui a a été fait sur \textit{standford alpaca} sous format (Instructions Input Output);
-        \item[--] FineTuning de Falcon-7B sur les données générées en utilisant du Parameter Efficient Fine Tuning (PEFT) et Low Rank Adaptation (LoRA);        
-        \item[--] Déploiement du modèle sur HuggingFace \textit{Inference Endpoints} et développement d'un dashboard avec \textit{streamlit} pour l'interaction;
-        \item[--] Même expérience réalisée avec les API d'OpenAI couplées à \textit{langchain} pour créer un prototype de QA sur des documents sur lesquels nous avons créé des vectors stores avec ChromaDB.
-    \end{itemize}
-    \end{minipage}
-}
-\end{tabularx}
-
-\begin{tabularx}{\linewidth}{ @{}l r@{} }        
-\textbf{Mise en place d’une pipeline de données et développement} & \hfill Eurazeo \\
-\textbf{de logiciels pour la conformité aux régulations ESG} & \hfill  \\[3.75pt]
-\multicolumn{2}{@{}X@{}}{
-\begin{minipage}[t]{\linewidth}
-Avec l'entrée en vigueur du CSRD (Corporate Sustainability Reporting Directive) en 2021, l'importance des rapports ESG (Environnemental, Social, Gouvernance) pour les entreprises a considérablement augmenté. Ces rapports, devenus obligatoires pour un nombre croissant d'entreprises, jouent un rôle crucial non seulement en matière de conformité réglementaire, mais aussi dans l'amélioration de l'image publique des entreprises. Dans ce contexte, notre client, un grand fonds d'investissement, a sollicité notre expertise pour développer un système intégré de collecte, de calcul et de reporting des métriques ESG. Ce projet visait non seulement à répondre aux nouvelles exigences réglementaires, mais aussi à positionner notre client de manière proactive face aux enjeux environnementaux, sociaux et de gouvernance. Cette démarche a renforcé la transparence et la responsabilité, éléments de plus en plus valorisés dans le monde des affaires actuel. \\
-    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
-        \item[--] Mise en place et alimentation d’un modèle de données sur Snowflake;
-        \item[--] Développement d’un package pour extraire les données du data warehouse, calculer les métriques ESG des différentes entreprises et fonds d’investissements que composent notre client et pousser les résultats sur Snowflake;
-        \item[--] Création d’un chatbot-intent pour répondre à des questions sur les législations ESG :
-        \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
-            \item[$\ast$] Prétaitement des données textuelles avec NLTK, tokenisation, lemmatisation, suppression des ponctuations;
-            \item[$\ast$] Tests de différentes méthodes de \textit{vectorisation de mots}, bag of words, puis Word2Vec (Skip-gram, CBOW);
-            \item[$\ast$] Création du Dataset du DataLoader avec Pytorch et mise en place d’un modèle de classification d’intentions constitué de quelques couches linéaires séparés par des fonctions d’activations (ReLU);
-            \item[$\ast$] Entraînement du modèle et développement de l’interactivité du Chatbot.
-        \end{itemize}
-        \item[--] Versionning des différentes étapes du projet sur Git.
-    \end{itemize}
-    \end{minipage}
-}
-\end{tabularx}
-
-\begin{tabularx}{\linewidth}{ @{}l r@{} }
-\textbf{Développement d’un modèle de prédiction d’attrition} & \hfill GS1 France \\[3.75pt]
-\multicolumn{2}{@{}X@{}}{
-\begin{minipage}[t]{\linewidth}
-Face à une attrition croissante des utilisateurs chez notre client, un leader mondial dans la gestion des standards d'identification unique, nous avons été sollicités pour analyser et comprendre les raisons de la résiliation des abonnements parmi ses 60 000 entreprises clientes en France. Notre mission consistait à développer un modèle de machine learning capable de prédire la probabilité de démission d'une entreprise, en utilisant des données spécifiques. Ce modèle permet aux équipes marketing de cibler et de proposer des offres personnalisées aux clients susceptibles de résilier, contribuant ainsi à la rétention et à la satisfaction clientèle. \\
-    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
-        \item[--] Analyse, prétraitement et visualisation des données clients pour comprendre les types de clients qui résilient leurs abonnements;
-        \item[--] Traitement des valeurs aberrantes avec une approche métier et l’approche interquartile;
-        \item[--] Traitement des valeurs manquantes et calculs de tests statistiques et de variance inflation factor (VIF) pour éviter les problèmes de mutlicolinéarité;
-        \item[--] Prédiction de la probabilité d’attrition pour chacun des adhérents avec des modèles d’arbres de décision tels que Xtreme Gradient Boosting \textit{XGBoost};
-        \item[--] Interprétation des modèles avec l’approche TreeExplainer de Shap pour comprendre l’importance qu’a chaque variable (feature) sur les résultats;
-        \item[--] Ajout de loggings pour monitorer l’exécution des scripts;
-        \item[--] Structuration du projet sur GitLab pour faciliter le déploiement.
-    \end{itemize}
-    \end{minipage}
-}
-\end{tabularx}
-
-\begin{tabularx}{\linewidth}{ @{}l r@{} }
-\textbf{Prédiction de ventes en volumes sur trois (3) années } & \hfill BEL GROUP \\
-\textbf{pour plusieurs marques de différents pays au sein du groupe} & \hfill  \\[3.75pt]
-\multicolumn{2}{@{}X@{}}{
-\begin{minipage}[t]{\linewidth}
-Après la période Covid, notre client, un acteur majeur du marché fromager, souhaitait optimiser ses investissements pour augmenter ses ventes en volume. Nous avons réalisé une étude approfondie des ventes, examinant la position de chaque marque sur leur marché respectif. En utilisant des modèles de séries temporelles développés avec la librairie Prophet, nous avons prédit les ventes sur trois ans, en intégrant divers scénarios pour évaluer l'impact de chaque paramètre comme l'Advertising \& Promotion (A\&P), le prix par volume, le taux d'innovation, et les promotions. Les résultats et les insights modélisés ont été présentés lors de workshops dans sept pays différents, facilitant des discussions stratégiques parmi les décisionnaires et contribuant à une meilleure compréhension des leviers d'optimisation des ventes. \\
-    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
-        \item[--] Analyse des données de ventes en volume pour comprendre la saisonnalité;
-        \item[--] Prédire les ventes en volume sur trois (3) années pour chacune des marques en utilisant des modèles logistiques et linéaires de la librairie Prophet, avec et sans regressors;
-        \item[--] Mise en place de scénarios en variant les inputs (regressors) pour ainsi prédire l’impact qu’a chaque feature dans la projection des ventes en volume;
-        \item[--] Préparation de workshops au sein de sept (7) pays pour présenter les résultats et expliquer nos modèles et leurs limites.
-    \end{itemize}
-    \end{minipage}
-}
-\end{tabularx}
 
 \begin{tabularx}{\linewidth}{ @{}l r@{} }
 \textbf{Chargé de TDs en Probabilités et Statistiques} & \hfill Fev 2024 - Présent \\
@@ -276,6 +204,7 @@ Le programme se concentrera principalement sur les aspects de dénombrement, d'i
 \end{minipage}
 }
 \end{tabularx}
+
 
 \begin{tabularx}{\linewidth}{ @{}l r@{} }
 \textbf{Mentor Data Scientist} & \hfill Fev 2023 - Présent \\
@@ -294,6 +223,25 @@ En tant que mentor en Data Science chez OpenClassrooms, une plateforme de format
     \end{minipage}
 }
 \end{tabularx}
+
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Machine Learning Engineer} & \hfill Dec 2022 - Fev 2024 \\
+\textit{Pivot \& Co} & \hfill Paris \\[3.75pt]
+\textbf{R\&D Proof-of-concepts} & \hfill Internal - \href{https://huggingface.co/Tidzo/falcon-7b-esg-instruct}{voir HF}\\
+\multicolumn{2}{@{}X@{}}{
+\begin{minipage}[t]{\linewidth}
+Face à la complexité croissante des régulations ESG et à la nécessité pour les entreprises d'y répondre de manière efficace, nous avons identifié le besoin d'un outil interactif pour simplifier l'accès à ces informations. C'est dans cet esprit que le concept d'un chatbot ESG a été développé. Ce chatbot vise à offrir une interface conviviale et intuitive pour les utilisateurs, leur permettant de comprendre et d'interroger facilement les régulations ESG. Il s'agit d'une réponse directe à l'augmentation des exigences en matière de conformité et de transparence, offrant ainsi un moyen rapide et accessible de naviguer dans les complexités des normes ESG. \\
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+        \item[--] Génération de données basées sur les régulations ESG en s'inspirant de ce qui a a été fait sur \textit{standford alpaca} sous format (Instructions Input Output);
+        \item[--] FineTuning de Falcon-7B sur les données générées en utilisant du Parameter Efficient Fine Tuning (PEFT) et Low Rank Adaptation (LoRA);        
+        \item[--] Déploiement du modèle sur HuggingFace \textit{Inference Endpoints} et développement d'un dashboard avec \textit{streamlit} pour l'interaction;
+        \item[--] Même expérience réalisée avec les API d'OpenAI couplées à \textit{langchain} pour créer un prototype de QA sur des documents sur lesquels nous avons créé des vectors stores avec ChromaDB.
+    \end{itemize}
+    \end{minipage}
+}
+\end{tabularx}
+
 
 \begin{tabularx}{\linewidth}{ @{}l r@{} }
 \textbf{Machine Learning and Software Engineer} & \hfill Mars 2021 - Nov 2021 \\
@@ -319,6 +267,7 @@ IPYA (I Predict Your Actions), est un projet innovant financé par l’INRIA, d�
 }
 \end{tabularx}
 
+
 \begin{tabularx}{\linewidth}{ @{}l r@{} }
 \textbf{R\&D Deep Learning Engineer Intern} & \hfill Mars 2020 - Août 2020 \\
 \textit{Groupe PSA} & \hfill Velizy Villacoublay \\[3.75pt]
@@ -338,35 +287,6 @@ récurrents tels que Long Short Term Memory (LSTMs);
 }
 \end{tabularx}
 
-\begin{tabularx}{\linewidth}{ @{}l r@{} }
-\textbf{Data Science Intern} & \hfill Juillet 2019 - Août 2019 \\
-\textit{Data Factory} & \hfill Bruxelles \\[3.75pt] 
-\multicolumn{2}{@{}X@{}}{
-\begin{minipage}[t]{\linewidth}
-\textbf{Prévision des retards des trains dans les transports publics bruxellois}
-    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
-        \item[--] Créer un script pour collecter des données quotidiennement avec AWS EC2 instance;
-        \item[--] Analyser la situation actuelle et les tendances existantes telles que les trains ou les gares qui cumulent le plus de retards dans les différentes régions;
-        \item[--] Créer des visualisations claires et interactives (plot.ly et matplotlib bibliothèques) sur les cartes pour expliquer les résultats de mon analyse des données;
-        \item[--] Développer des modèles d’ensembles et des baselines tels qu’une simple régression linéaire pour prédire les retards avec les données prétraitées.
-    \end{itemize}
-    \end{minipage}
-}
-\end{tabularx}
-
-\begin{tabularx}{\linewidth}{ @{}l r@{} }
-\textbf{Prévision des salaires des joueurs de football de la Jupiler Pro League}  & \hfill \href{https://atidiane.github.io/fifa-storyline/}{voir storyline} \\[3.75pt]
-\multicolumn{2}{@{}X@{}}{
-\begin{minipage}[t]{\linewidth}
-    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
-        \item[--] Faire du scraping (beautifulsoup4) pour recueillir des données sur les joueurs de la Jupiler Pro League;
-        \item[--] Fusionner les données collectées avec d’autres sources pour obtenir plus d’informations sur les joueurs;
-        \item[--] Nettoyer, prétraiter et prédire les salaires des joueurs;
-        \item[--] Faire une storyline sur les salaires dans le football avec des visualisations interactives puis y intégrer une simple régréssion linéaire pour prédire les salaires en fonction des caractéristiques du joueur sélectionné ainsi qu’un KNN (K-Nearest Neighbors) pour trouver les cinq joueurs Jupiler Pro League les plus proches de ces mêmes caractéristiques.
-    \end{itemize}
-    \end{minipage}
-}
-\end{tabularx}
 
 \begin{tabularx}{\linewidth}{ @{}l r@{} }
 \textbf{Assistant de recherche en Machine Learning} & \hfill Nov 2018 - Fev 2019 \\
@@ -399,26 +319,6 @@ récurrents tels que Long Short Term Memory (LSTMs);
 \nocite{*}
 \printbibliography[heading=none]
 \end{refsection}
-
-
-%Projects
-\section{Projets}
-
-\begin{tabularx}{\linewidth}{ @{}l r@{} }
-\textbf{Convolutional Neural Networks} & \hfill \href{https://github.com/ATidiane/RDFIA/tree/master/TMEs/tp6-7}{voir sur GitHub} \\[3.75pt]
-\multicolumn{2}{@{}X@{}}{Implémentation d’un réseau de neurones convolutifs dont l’architecture est proche d’AlexNet, pour la classification d’images sur la base CIFAR-10}.
-\end{tabularx}
-
-\begin{tabularx}{\linewidth}{ @{}l r@{} }
-\textbf{Image Description with SIFT, bag of words  and SVM Classification} & \hfill \href{https://github.com/ATidiane/RDFIA/tree/master/TMEs/tp1-2-3}{voir sur GitHub} \\
-[3.75pt]
-\multicolumn{2}{@{}X@{}}{Dans le cadre d’un cours sur la reconnaissance des formes et l’interprétration d’images, nous avons été introduit au SIFT (Scale Invariant Feature Transform), qui est un descripteur d’image robuste à la rotation, la variation d’intensité ainsi qu’au zoom. Après avoir calculé les descripteurs de nos images distinctes, nous avons appliqué un K-Means avec un k défini à 1001 pour trouver les centres des clusters qui représentent au mieux les images. Le dernier cluster étant un vecteur de zéros pour les descripteurs vides. Puis, nous assignâmes à chacun des clusters, sa région la plus proche. Enfin, pour la tâche de classification, nous avons généré des caractéristiques pour chacune des images en fonction de notre dictionnaire visuel des régions.}
-\end{tabularx}
-
-\begin{tabularx}{\linewidth}{ @{}l r@{} }
-\textbf{Inpainting} & \hfill \href{https://github.com/ATidiane/ARF/tree/master/InpaintingProject}{voir sur GitHub} \\[3.75pt]
-\multicolumn{2}{@{}X@{}}{Dans un premier temps nous avons comparé la performance des algorithmes tels que la régression linéaire et la régression ridge sur les données USPS(United states Postal Service) pour la reconnaissance des chiffres et dans un second temps nous avons implémenté un ensemble de fonctions utilisant l’algorithme du Lasso pour prédire les pixels manquants d’une image. En un mot débruiter une image ou compléter une partie d’image manquante.} \\
-\end{tabularx}
 
 % Example
 %\begin{tabularx}{\linewidth}{ @{}l r@{} }
