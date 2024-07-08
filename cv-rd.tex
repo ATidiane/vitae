@@ -71,9 +71,6 @@
 \newlength{\fullcollw}
 \setlength{\fullcollw}{0.47\textwidth}
 
-% Prevent tabularx from directly starting on the next page
-\usepackage{needspace}
-
 %custom \section
 \usepackage{titlesec}				
 \usepackage{multicol}
@@ -242,10 +239,6 @@ Face à la complexité croissante des régulations ESG et à la nécessité pour
 }
 \end{tabularx}
 
-% Force a page break if necessary and add some vertical space
-\vspace{1em}
-\clearpage
-
 \needspace{5\baselineskip}
 \begin{tabularx}{\linewidth}{ @{}l r@{} }
 \textbf{Machine Learning and Software Engineer} & \hfill Mars 2021 - Nov 2021 \\
@@ -254,19 +247,19 @@ Face à la complexité croissante des régulations ESG et à la nécessité pour
 \multicolumn{2}{@{}X@{}}{
 \begin{minipage}[t]{\linewidth}
 IPYA (I Predict Your Actions), est un projet innovant financé par l’INRIA, d’une durée de 9 mois, axé sur le développement de modèles IA pour prédire les intentions des piétons et augmenter l'autonomie des véhicules, réduisant ainsi les risques d'accidents. Ma contribution incluait l'ajustement des algorithmes de détection de piétons, et l'exploration de techniques avancées de tracking et de segmentation. J'ai également participé au développement de modèles basés sur des LSTMs et des couches de transformers pour une prédiction précise des actions futures. Le projet s'est conclu par un déploiement réussi sur Nvidia Jetson Nano pour des tests en temps réel. \\
-    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
-        \item[--] Création du Dataset et du DataLoader avec PyTorch sur la base de données JAAD (Joint Attention for Autonomous Driving) spécifiquement amélioré avec plus de labels sur ce projet;
-        \item[--] Etat de l’art sur les modèles de détection, de tracking, de segmentation et de prédiction d’action;
-        \item[--] Finetuning d’algorithmes de détections (yolov5) sur les données pour la détection de piétons;
-        \item[--] Exploration d’algorithmes de tracking SORT (Simple Online and Real Time Tracking) et DeepSort;
-        \item[--] Exploration d’algorithmes de segmentation tels que BiseNet et DDRN ainsi que d’autres qui sont plus à l’état de l’art comme HyperSeg, dans l’objectif de différencier un piéton se trouvant sur la chaussée et un autre se trouvant sur le trottoir;
-        \item[--] Recherche et Développement sur les modèles de prédiction afin de prédire le TTE (Time-To-Event), à titre d’exemple, le piéton va-t-il traverser dans 1, 3, ou 5 secondes;
-        \item[--] Développement de modèles à base de LSTMs pour prédire l’action future en prenant en entrée une fenêtre d’une demi-seconde d’actions passées (30 frames);
-        \item[--] Prédiction de l’action de la frame suivante, puis de celle à 1 seconde (30 frames), puis 3 secondes (90 frames) et ainsi de suite;
-        \item[--] Projection de la région d’intérêt (ROI) du piéton (2D) vers une dimension (1D) puis concaténation avec des données contextuelles et de l’action correspondante aux différents ROIs, et prédiction de l’action future;
-        \item[--] R\&D de modèles à base de couches de transformers à la place de LSTMs;
-        \item[--] Déploiement du meilleur modèle sur Nvidia Jetson Nano, conversion de modèles en ONNX puis adaptation en TensorRT afin de faire des tests en temps réel en voiture en Île-de-France.
-    \end{itemize}
+    %\begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+    %    \item[--] Création du Dataset et du DataLoader avec PyTorch sur la base de données JAAD (Joint Attention for Autonomous Driving) spécifiquement amélioré avec plus de labels sur ce projet;
+    %    \item[--] Etat de l’art sur les modèles de détection, de tracking, de segmentation et de prédiction d’action;
+    %    \item[--] Finetuning d’algorithmes de détections (yolov5) sur les données pour la détection de piétons;
+    %    \item[--] Exploration d’algorithmes de tracking SORT (Simple Online and Real Time Tracking) et DeepSort;
+    %    \item[--] Exploration d’algorithmes de segmentation tels que BiseNet et DDRN ainsi que d’autres qui sont plus à l’état de l’art comme HyperSeg, dans l’objectif de différencier un piéton se trouvant sur la chaussée et un autre se trouvant sur le trottoir;
+    %    \item[--] Recherche et Développement sur les modèles de prédiction afin de prédire le TTE (Time-To-Event), à titre d’exemple, le piéton va-t-il traverser dans 1, 3, ou 5 secondes;
+    %    \item[--] Développement de modèles à base de LSTMs pour prédire l’action future en prenant en entrée une fenêtre d’une demi-seconde d’actions passées (30 frames);
+    %    \item[--] Prédiction de l’action de la frame suivante, puis de celle à 1 seconde (30 frames), puis 3 secondes (90 frames) et ainsi de suite;
+    %    \item[--] Projection de la région d’intérêt (ROI) du piéton (2D) vers une dimension (1D) puis concaténation avec des données contextuelles et de l’action correspondante aux différents ROIs, et prédiction de l’action future;
+    %    \item[--] R\&D de modèles à base de couches de transformers à la place de LSTMs;
+    %    \item[--] Déploiement du meilleur modèle sur Nvidia Jetson Nano, conversion de modèles en ONNX puis adaptation en TensorRT afin de faire des tests en temps réel en voiture en Île-de-France.
+    %\end{itemize}
     \end{minipage}
 }
 \end{tabularx}
