@@ -176,7 +176,27 @@ OS et versionnage & \normalsize{Unix/Linux, Git}\\
 \section{Expériences Professionnelles}
 
 \begin{tabularx}{\linewidth}{ @{}l r@{} }
-\textbf{Machine Learning Engineer} & \hfill Feb 2024 - Présent \\
+\textbf{Senior ML Engineer} & \hfill Avril 2025 - Présent \\
+\textit{Pubstack} & \hfill Paris \\[3.75pt]
+\textbf{Filtrer les enchères publicitaires} \\
+\multicolumn{2}{@{}X@{}}{
+\begin{minipage}[t]{\linewidth}
+Lors d'enchères publicitaires, l'offre est envoyée à plusieurs acheteurs potentiellement intéressés par l'emplacement publicitaire sur le web. Ayant une place de choix dans l'Adtech, nous développons des modèles de Machine Learning pour filtrer les acheteurs (bidders) et n'appeler que ceux qui ont le plus de chances de manifester un intérêt pour l'espace publicitaire. Tout ceci se passe en quelques microsecondes lorsque vous chargez une page web. Il s'agit donc d'implémenter une architecture robuste et des modèles rapides pour éviter toute latence. \\
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+        \item[--] Implémentation d'algorithmes basés sur les arbres de décision, notamment LightGBM, pour prédire si un acheteur serait intéressé par une enchère donnée;
+        \item[--] Conversion du modèle en ONNX pour assurer l'interopérabilité et accélérer le temps d'inférence;
+        \item[--] Mise en place d'une API robuste et concurrente pour recevoir des centaines de millions de requêtes par jour;        
+        \item[--] Mise en place la CI/CD avec Github Actions;
+        \item[--] Gestion de l'infrastructure avec Terraform et Kubernetes pour assurer le réentraînement automatique des modèles via des AWS Step Functions, ainsi que la gestion des ressources (CPU, RAM) des machines déployées;
+        \item[--] Monitoring des performances des machines et des taux d'erreur sur Datadog.
+    \end{itemize}
+    \end{minipage}
+}
+\end{tabularx}
+
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Machine Learning Engineer} & \hfill Feb 2024 - Mars 2025 \\
 \textit{Polarys} & \hfill Colombes \\[3.75pt]
 \textbf{Conception de chatbots} & \hfill Filiale d'une grande société de transports \\
 \multicolumn{2}{@{}X@{}}{
@@ -192,6 +212,7 @@ Pour remplacer les nombreux FAQs qu'ils avaient à disposition, le client s'est 
     \end{minipage}
 }
 \end{tabularx}
+
 
 \begin{tabularx}{\linewidth}{ @{}l r@{} }
 \textbf{Chargé de TDs en Probabilités et Statistiques} & \hfill Fev 2024 - Présent \\
